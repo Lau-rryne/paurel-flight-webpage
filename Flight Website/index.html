@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Flight Booking</title>
+</head>
+<body>
+
+
+<nav>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#About">About</a></li>
+        <li><a href="#flights">Flights</a></li>
+        <li><a href="#booking">Booking</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+
+<section id="home">
+    <div class="banner">
+        <img src="PAUREL AIRLINES.png"  alt="Flight Booking Banner">
+    </div>
+</section>
+
+
+<section id="flights">
+    <h2>Available Flights</h2>
+    <div class="styled-table">
+        <table>
+            <thead>
+                <tr>
+                    <th>Flight Number</th>
+                    <th>Departure time</th>
+                    <th>Arrival time</th>
+                    <th>Departure</th>
+                    <th>Destination</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>FL144</td>
+                    <td>2000hrs</td>
+                    <td>0402hrs</td>
+                    <td>Nairobi, Kenya</td>
+                    <td>Switzerland</td>
+                    <td>USD695*</td>
+                </tr>
+                <tr>
+                    <td>FL148</td>
+                    <td>1800hrs</td>
+                    <td>1852hrs</td>
+                    <td>Nairobi, Kenya</td>
+                    <td>Lake victoria</td>
+                    <td>$500</td>
+                </tr>
+                <tr>
+                    <td>FL145</td>
+                    <td>1300hrs</td>
+                    <td>2200hrs</td>
+                    <td>Nairobi, Kenya</td>
+                    <td>London</td>
+                    <td>$701</td>
+                </tr>
+                <tr>
+                    <td>FL145</td>
+                    <td>1100hrs</td>
+                    <td>1600hrs</td>
+                    <td>Nairobi, Kenya</td>
+                    <td>Maldives</td>
+                    <td>$738</td>
+                </tr>
+            
+            </tbody>
+        </table>
+    </div>
+</section>
+<div class="slideshow-container">
+    <div class="mySlides">
+      <img src="download (1).jpeg" alt="Image 1">
+    </div>
+  
+    <div class="mySlides">
+      <img src="london).jpeg" alt="Image 2">
+    </div>
+  
+    <div class="mySlides">
+      <img src="maldives.jpeg" alt="Image 3">
+    </div>
+  
+    <div class="mySlides">
+      <img src="Miami 🌴.jpeg" alt="Image 4">
+    </div>
+  
+    <div class="mySlides">
+      <img src="lake vic.jpeg" alt="Image 5">
+    </div>
+  
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+
+<section id="booking">
+    <h2>Booking</h2>
+    <h3>Please fill in the form to book your flight:</h3>
+    <form id="bookingForm" onsubmit="submitForm(event)">
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="fullName" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="destination">Destination:</label>
+        <select id="destination" name="destination" onchange="updatePrice()" required>
+            <option value="" disabled selected>Select Destination</option>
+            <option value="Switzerland" data-price="695">Switzerland</option>
+            <option value="LakeVictoria" data-price="500">Lake Victoria</option>
+            <option value="London" data-price="701">London</option>
+            <option value="Maldives" data-price="738">Maldives</option>
+        </select>
+
+        <label for="departureDate">Departure Date:</label>
+        <input type="date" id="departureDate" name="departureDate" required>
+
+        <label for="numberOfPassengers">Number of Passengers:</label>
+        <input type="number" id="numberOfPassengers" name="numberOfPassengers" min="1" required>
+
+        <label for="totalPrice">Total Price:</label>
+        <input type="text" id="totalPrice" name="totalPrice" readonly>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <p id="bookingResult"></p>
+</section>
+
+
+<section id="offers"></section>
+    <li><a href="#offers" onclick="scrollToSection('about')">About</a></li>
+    <section id="about">
+
+    <p>Welcome to our flight booking website! We aim to provide you with a seamless and convenient experience for booking your flights. With a wide range of available flights and competitive prices, you can easily find the perfect flight for your travel needs. Our team of dedicated professionals is here to assist you every step of the way to ensure a smooth and enjoyable journey. Book your next flight with us and experience the difference.</p>
+</section>
+<section id="contact">
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>For inquiries, feel free to reach out to us:</p>
+        <address>
+            <strong>Paurel</strong><br>
+           Mokka lane<br>
+           Ohio City<br>
+            Phone: +25455667222<br>
+            Email: paurel@gmail.com
+        </address>
+
+</div>
+  
+<footer>
+    <p>&copy; Flight Booking Website</p>
+</footer>
